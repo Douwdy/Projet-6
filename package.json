@@ -1,0 +1,23 @@
+{
+  "name": "piiquante",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run build && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Douwdy/Projet-6.git"
+  },
+  "author": "Guillaume Lamarque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Douwdy/Projet-6/issues"
+  },
+  "homepage": "https://github.com/Douwdy/Projet-6#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.2"
+  }
+}
