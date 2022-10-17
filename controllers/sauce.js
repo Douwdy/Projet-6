@@ -3,7 +3,7 @@ const Sauce = require("../models/sauce");
 const fs = require('fs');
 
 //Add new Sauce
-exports.createSauce = (req, res, next) => {
+exports.createSauce = (req, res) => {
 
 	const sauceObject = JSON.parse(req.body.sauce);
 	delete sauceObject._id;
@@ -18,7 +18,7 @@ exports.createSauce = (req, res, next) => {
 		.catch(error => res.status(400).json({ error }));
 };
 //Display all Sauces
-exports.getAllSauce = (req, res, next) => {
+exports.getAllSauce = (req, res) => {
 	Sauce.find().then(
 		(sauce) => {
 			res.status(200).json(sauce);

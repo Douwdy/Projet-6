@@ -5,7 +5,7 @@ const User = require("../models/user");
 
 
 //Inscription
-exports.signup = (req, res, next) => {
+exports.signup = (req, res) => {
 	bcrypt.hash(req.body.password, 10)
 		.then(hash => {
 			const user = new User({
@@ -20,7 +20,7 @@ exports.signup = (req, res, next) => {
 };
 
 //Connection 
-exports.login = (req, res, next) => {
+exports.login = (req, res) => {
 	User.findOne({ email: req.body.email }) //Check if user exists
 		.then((user) => {
 			if (!user) {
